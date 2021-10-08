@@ -69,7 +69,7 @@ const pizza = new FoodConstructor("mix", "fastfood" , "60000" , "45 minutes" , "
 const obj1 = {
     key0 : false ,
     key1 : "vall" ,
-    key2 : 20 ,
+    key2 : 30 ,
     key3 : [0 , 1 , 2] ,
     key4 : {name : "Mahed"}
 }
@@ -79,24 +79,60 @@ const obj2 = {
     key1 : "vall" ,
     key2 : 30 ,
     key3 : [0 , 1 , 2] ,
-    key4 : {name : "asghar"}
+    key4 : {name : "Mahed"}
+}
+// const isEqual = (object1 , object2) => {
+//     let object1Keys = Object.keys(object1)
+//     let object1Val = Object.values(object1)
+//     let object2Keys = Object.keys(object2)
+//     let object2Val = Object.values(object2)
+//
+//     if (object1Keys.length === object2Keys.length) {
+//         for (i = 0; i <= 2; i++) {
+//             if (object1Keys[i] !== object2Keys[i] || object1Val[i] !== object2Val[i]) {
+//                 return false
+//             }
+//         }
+//         arrayChecker(object1.key3 , object2.key3)
+//         objectChecker(object1.key4 , object2.key4)
+//     }
+// }
+//
+// const arrayChecker =(a,b) =>
+// {
+//     if(a.length!==b.length)
+//         return false;
+//     else
+//     {
+//         for( i=0;i<a.length;i++)
+//             if(a[i]!==b[i])
+//                 return false;
+//         return true;
+//     }
+// }
+//
+// const objectChecker = ( a,b) => {
+//     if (Object.entries(a).toString() !== Object.entries(b).toString()) {
+//         return false
+//     } else {
+//         return true
+//     }
+// }
+
+const isEqual = (object1 , object2) => { // Baraye neveshtane in tike be ma'naye vagheyie kalame PARE PARE shodam !!!!
+    console.log(JSON.stringify(object1) === JSON.stringify(object2))
+}
+isEqual(obj1,obj2)
+
+let a = 1 ;
+let b = a ;
+const isSame = (object1 , object2) => {
+    console.log(object1 === object2)
 }
 
+isSame(a ,b )
 
 
-const objectChecker = (object1 , object2) => {
-    if (object1.length === object2.length){
-        for (i = 0 ; i <= object1.length ; i++){
-            if (object1[i] !== object2[i]){
-                return false
-            }
-        }
-        return true
-    } else {
-       return false
-    }
-}
 
-// console.log(objectChecker()(obj1 , obj2))
 
 
